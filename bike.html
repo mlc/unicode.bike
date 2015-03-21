@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- unicode bike. -->
+<!-- mike castleman, http://mlcastle.net/ -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>🚲</title>
+    <style type="text/css">
+      @font-face {
+        font-family: "bikefont";
+        src: url('font/bikefont.eot?#iefix') format('embedded-opentype'),
+             url('font/bikefont.woff') format('woff'),
+             url('font/bikefont.ttf') format('truetype'),
+             url('font/bikefont.svg#bikefont') format('svg');
+      }
+      html, body { background-color: rgb(204,158,97); color: rgb(84,31,20); }
+      ::selection { background-color: rgb(147,129,114); }
+      ::-moz-selection { background-color: rgb(147,129,114); }
+      #outer { text-align: center; }
+      #bike { font-family: 'bikefont'; }
+    </style>
+    <link rel="icon" type="image/png" href="/%F0%9F%9A%B2.png"/>
+  </head>
+  <body>
+    <div id="outer"><span id="bike" style="font-size: 100px;">🚲</span></div>
+    <script type="text/javascript">
+      (function(window, document) {
+        if (!document || !(document.getElementById))
+          return;
+        var bike = document.getElementById("bike");
+        if (!bike || !window.innerWidth || !bike.offsetWidth)
+          return;
+        var setSize = function(size) {
+          bike.style.fontSize = (size + "px");
+        },
+        resize = function() {
+          var targetW = window.innerWidth*0.9, targetH = window.innerHeight*0.9;
+          setSize(100);
+          setSize(100*Math.max(1.0, Math.min(targetW / bike.offsetWidth, targetH / bike.offsetHeight)));
+        }
+        resize();
+        var oldResize = window.onresize;
+        window.onresize = function() {
+          resize();
+          if (typeof oldResize === 'function')
+            oldResize.apply(this, arguments)
+        }; 
+      })(this, this.document);
+
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '532c4b02eddd5b4f510020bd');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "checksum": {
+    "previous": "8371f9ed40c58a24dff10f77c630ccec02cdbc72627f8f1e28907df3e81b67e5",
+    "current": "8371f9ed40c58a24dff10f77c630ccec02cdbc72627f8f1e28907df3e81b67e5"
+  },
+  "fonts": [
+    "assets/fonts/bikefont_8371f9ed40c58a24dff10f77c630ccec.ttf",
+    "assets/fonts/bikefont_8371f9ed40c58a24dff10f77c630ccec.svg",
+    "assets/fonts/bikefont_8371f9ed40c58a24dff10f77c630ccec.woff",
+    "assets/fonts/bikefont_8371f9ed40c58a24dff10f77c630ccec.eot"
+  ],
+  "glyphs": {
+    "noun_project_536": {
+      "codepoint": 61696,
+      "source": "vectors/noun_project_536.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": true,
+    "font_name": "bikefont",
+    "force": false,
+    "input": {
+      "templates": "templates",
+      "vectors": "vectors"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "assets/css",
+      "fonts": "assets/fonts",
+      "preview": "blah"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "assets/css/bikefont.css",
+    "blah/bikefont-preview.html"
+  ]
+}
