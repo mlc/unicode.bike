@@ -26,26 +26,17 @@
     <div id="outer"><span id="bike" style="font-size: 100px;">🚲</span></div>
     <script type="text/javascript">
       (function(window, document) {
-        if (!document || !(document.getElementById))
-          return;
-        var bike = document.getElementById("bike");
-        if (!bike || !window.innerWidth || !bike.offsetWidth)
-          return;
-        var setSize = function(size) {
+        var bike = document.getElementById("bike"),
+        setSize = function(size) {
           bike.style.fontSize = (size + "px");
         },
         resize = function() {
           var targetW = window.innerWidth*0.9, targetH = window.innerHeight*0.9;
           setSize(100);
           setSize(100*Math.max(1.0, Math.min(targetW / bike.offsetWidth, targetH / bike.offsetHeight)));
-        }
+        };
         resize();
-        var oldResize = window.onresize;
-        window.onresize = function() {
-          resize();
-          if (typeof oldResize === 'function')
-            oldResize.apply(this, arguments)
-        }; 
+        window.addEventListener("resize", resize, false);
       })(this, this.document);
 
       var _gauges = _gauges || [];
