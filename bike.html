@@ -32,11 +32,30 @@
         font-family: 'bikefont';
         font-size: 70vmin;
       }
+      body.bi {
+        background-color: #ddd;
+      }
+      body.bi #bike {
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(rgb(255, 0, 128), rgb(200, 37, 157), rgb(140, 71, 153), rgb(68, 46, 159), rgb(0, 50, 160));
+      }
     </style>
   </head>
   <body>
     <div id="bike">🚲</div>
     <script async defer src="https://a.mlcastle.net/latest.js"></script>
     <noscript><img src="https://a.mlcastle.net/noscript.gif" alt=""/></noscript>
+    <script type="application/javascript">
+      const setClass = () => {
+        if (window.location.hash === '#bicycle') {
+          document.body.classList.add('bi');
+        } else {
+          document.body.classList.remove('bi');
+        }
+      }
+      setClass();
+      window.addEventListener('hashchange', setClass, false);
+    </script>
   </body>
 </html>
